@@ -1,0 +1,132 @@
+//$icon-font-path: '../fonts/';
+
+// bower:scss
+//@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+/* Space out content a bit */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.container {
+}
+
+$green: #117d0f;
+$yellow: #ffab00;
+$red: #9c0101;
+
+#hexagon {
+  position: relative;
+  width: 70vmin;
+  height: 59.1vmin;
+  margin: 0 auto;
+  svg {
+    position: absolute;
+    width: 48.95%;
+    font-family: verdana,geneva,sans-serif;
+    transition: transform 1s;
+    text {
+      fill: white;
+      font-family: Arial, sans-serif;
+    }
+  }
+  &.hex_1 {
+    svg {
+      &:nth-child(1){
+        path {
+          fill: $yellow;
+        }
+      }
+      &:nth-child(2){
+        path {
+          fill: $red;
+        }
+      }
+      &:nth-child(3){
+        path {
+          fill: $green;
+        }
+      }
+      &:nth-child(4){
+        path {
+          fill: $yellow;
+        }
+      }
+      &:nth-child(5){
+        path {
+          fill: $red;
+        }
+      }
+      &:nth-child(6){
+        path {
+          fill: $green;
+        }
+      }
+    }
+  }
+}
+
+#hex_1 {
+  top: 0;
+  left: 50%;
+  transform: translatex(-50%) rotateY( 270deg );
+  .flip & {
+    transform: translatex(-50%) rotateY( 360deg );
+  }
+}
+
+#hex_2 {
+  top: 10.27vmin;
+  right: 0;
+  transform: rotate(60.05deg) rotateY( 270deg );
+  // text {
+  //   transform: rotate(-60.05deg);
+  // }
+  .flip & {
+    transform: rotate(60.05deg) rotateY( 360deg );
+    transition-delay: .2s;
+  }
+}
+
+#hex_3 {
+  bottom: 10.27vmin;
+  right: 0;
+  transform: rotate(120.05deg) rotateY( 270deg );
+  .flip & {
+    transform: rotate(120.05deg) rotateY( 360deg );
+    transition-delay: .4s;
+  }
+}
+
+#hex_4 {
+  bottom: 0;
+  left: 50%;
+  transform: translatex(-50%) rotate(-180deg) rotateY( 270deg );
+  .flip & {
+    transform: translatex(-50%) rotate(-180deg)  rotateY( 360deg );
+    transition-delay: .6s;
+  }
+}
+
+#hex_5 {
+  bottom: 10.27vmin;
+  left: 0;
+  transform: rotate(-120.05deg) rotateY( 270deg );
+  .flip & {
+    transform: rotate(-120.05deg) rotateY( 360deg );
+    transition-delay: .8s;
+  }
+}
+
+#hex_6 {
+  top: 10.27vmin;
+  left: 0;
+  transform: rotate(-60.05deg) rotateY( 270deg );
+  .flip & {
+    transform: rotate(-60.05deg) rotateY( 360deg );
+    transition-delay: 1s;
+  }
+}
+
